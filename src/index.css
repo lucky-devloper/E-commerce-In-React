@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider {
+  /* background-color: red; */
+  width: 100%;
+  /* Adjust according to your image width */
+  height: 50px;
+  /* Adjust according to your image height */
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main {
+  opacity: 0;
+  animation: slideTop .7s forwards;
+  animation-delay: .2s;
+}
+
+.btn {
+  opacity: 0;
+  animation: slideBottom .7s forwards;
+  animation-delay: .2s;
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.homepage {
+  position: relative;
+  z-index: 0;
+}
+
+.active {
+  opacity: 0;
+  animation: slideleft .2s forwards;
+  animation-delay: 0.1s;
+}
+
+.hide {
+  opacity: 0;
+  animation: slideright .5s forwards;
+  animation-delay: 0.2s;
+}
+
+
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideright {
+  0% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}
+
+.top {
+  transition: transform 0.3s ease;
+  transform: translateY(0%);
+}
+
+.bottom {
+  position: absolute;
+  top: 23%;
+  transition: transform 0.3s ease;
+  transform: translateY(-55%);
+}
+
+
+.cart::-webkit-scrollbar {
+  display: none;
+}
