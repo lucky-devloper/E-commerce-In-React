@@ -18,7 +18,7 @@ function Homepage() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   return (
-    <div className='w-[100%] h-[100%] bg-[url(poster.avif)] bg-cover bg-center bg-no-repeat bg-fixed'>
+    <div className='w-[100%] h-[100%] bg-[url(https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center bg-no-repeat bg-fixed'>
       <div className='homepage w-[100%] h-[100%] bg-black bg-opacity-[0.3] flex flex-col gap-32'>
         <div className='w-[100%] h-[100px] bg-black bg-opacity-[0.1] flex justify-between items-center px-5'>
           <div className='flex items-center gap-5'>
